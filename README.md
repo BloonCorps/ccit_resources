@@ -1,2 +1,2 @@
-# ccit_resources
+# CCIT Resources
 Resources subpage on CCIT. Contains review materials and flashcards. 
