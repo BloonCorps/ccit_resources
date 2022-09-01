@@ -2,7 +2,7 @@
     include '../access.php';
 function foot() { ob_start() ; ?>
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-dark" style="background-color: #1d2ade !important;">
         <div class="container">
             <p class="m-0 text-center text-white" style="background-color: #1d2ade !important;">PBHA — Chinatown Citizenship </p>
         </div>
