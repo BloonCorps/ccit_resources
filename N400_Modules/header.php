@@ -80,7 +80,7 @@ function head($num) { ob_start(); ?>
                     <a class="nav-link" href="../other.html">Other Resources</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="../contact.html">Contact Us</a>
+                    <a class="nav-link" href="https://pbhachinatowncitizenship.com/">Home</a>
                     </li>
                 </ul>
                 </div>
