@@ -166,8 +166,8 @@
   </div>
 </section>
 <script>
-  $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
+  (document).ready(function(){
+    ('[data-toggle="tooltip"]').tooltip();
   });
 
   function conv(){
