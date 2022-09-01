@@ -29,7 +29,7 @@ function rev($array) { ob_start(); ?>
         <?php } ?>
       </div>  
       <div class="row">
-      
+        <!--
         <div class="col-lg-8 mx-auto">
             <button class="btn btn-light btn-xs" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="float:right; padding:5px">
                 <img src="../images/translate.png">
@@ -40,7 +40,7 @@ function rev($array) { ob_start(); ?>
                 </div>
             </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <script>
         function conv(){
