@@ -171,9 +171,7 @@
           fetchChinese('<?php echo $i ?>', document.getElementById('<?php echo $i ?>').innerHTML);
       <?php } ?>
 
-      <?php
-      echo '<script>console.log("Your stuff here")</script>';
-      ?>
+      <?php echo '<script>console.log("Your stuff here")</script>'; ?>
 
       $('[data-toggle="tooltip"]').tooltip();
   }
