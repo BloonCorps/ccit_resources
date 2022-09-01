@@ -1,0 +1,6 @@
+
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/pbhabths/resources.pbhachinatowncitizenship.com/
+    - /bin/cp -R * $DEPLOYPATH
