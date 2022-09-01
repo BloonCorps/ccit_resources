@@ -170,12 +170,8 @@
       <?php for ($i = 1 ; $i < 60 ; $i++) { ?>
           fetchChinese('<?php echo $i ?>', document.getElementById('<?php echo $i ?>').innerHTML);
       <?php } ?>
-
-      <?php echo '<script>console.log("Your stuff here")</script>'; ?>
-
       $('[data-toggle="tooltip"]').tooltip();
   }
-  
   function say( k ){
             var synth = window.speechSynthesis;
             var speech = new SpeechSynthesisUtterance(document.getElementById(''+k).innerHTML);
