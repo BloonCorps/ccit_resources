@@ -166,8 +166,8 @@
   </div>
 </section>
 <script>
-  (document).ready(function(){
-    ('[data-toggle="tooltip"]').tooltip();
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
   });
 
   function conv(){
@@ -176,12 +176,14 @@
       <?php } ?>
       $('[data-toggle="tooltip"]').tooltip();
   }
+
   function say( k ){
             var synth = window.speechSynthesis;
             var speech = new SpeechSynthesisUtterance(document.getElementById(''+k).innerHTML);
             speech.lang = 'en-US';
             synth.speak(speech);
   }
+
 </script>
 <?php echo foot()?>
 </html>

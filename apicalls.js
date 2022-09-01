@@ -3,8 +3,8 @@ let apiKey = "AIzaSyD16owbIkDlL8yQ-yisKK8QEH25u6xNjJI"; //how do we hide the key
 function fetchChinese(idchange, str) {
 
     return; 
-    
-    let baseUrl = "https://translation.googleapis.com/language/translate/v2?key=";
+
+    /*let baseUrl = "https://translation.googleapis.com/language/translate/v2?key=";
     let params = "&q="+str+"&target=zh";
 
     var xhttp = new XMLHttpRequest();
@@ -18,7 +18,7 @@ function fetchChinese(idchange, str) {
         }
     };
     xhttp.open("GET", url, true);
-    xhttp.send();
+    xhttp.send();*/
 }
 
 
