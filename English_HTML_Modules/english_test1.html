@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>English</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/custom.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="main.html">Chinatown Citizenship</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link active" href="english.html">English</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ushistory.html">US History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="n400.html">N400</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="other.html">Other Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>English Test</h1>
+      <p class="lead">This test consists of 20 questions pulled out of a test bank!</p>
+    </div>
+  </header>
+  <!-- Page Content -->
+  <div class="container">
+    <script type="text/javascript">
+
+
+      var QuesResp = [
+        ['3rd', 'third'], ['23', 'twenty-three'], ['76', 'seventy-six'], ['14th', 'fourteenth'], ['thirty-two', '32'],
+        ['68', 'sixty-eight'],['two hundred', '200'], ['fifty-nine', '59'], ['36th', 'thirty-sixth'], ['33rd', 'thirty-third'],
+        ['sixty-two', '62'], ['twenty-fifth', '25th'], ['1000', 'one thousand'], ['77', 'seventy-seven'],['18', 'eighteen']
+      ];
+    </script>
+
+    </head>
+
+    <body>
+      <div id="QuestionsResponses"></div>
+
+      <script type="text/javascript">
+        var maxQues = 10;
+        var QRpointers = [];
+
+        function randOrd() { return (Math.round(Math.random()) - 0.5); } // quick and dirty randomizer (not the best)
+
+        window.onload = function () {
+          for (var i = 0; i < QuesResp.length; i++) { QRpointers.push(i); }
+          QRpointers.sort(randOrd);                                    // better randomizers are available
+
+          var str = '<br><h1>Exam</h1><br>';
+          for (var Q = 0; Q < maxQues; Q++) {
+            str += '<h5>' + (Q + 1) + '. ';
+            str += QuesResp[QRpointers[Q]][0];
+            //    str += ' <input type="text" id="R'+Q+'" value="' +QuesResp[QRpointers[Q]][1]+ '"><p>';
+            str += '</h5><input type="text" id="R' + Q + '"><p>';
+          }
+          str += '<INPUT value="Submit" id="submit" type="button" onclick="scoreme()">';
+          str += '<INPUT id="score" type="text" style="border: 0px;background: transparent;" size="8">';
+          document.getElementById('QuestionsResponses').innerHTML = str;
+        }
+        function scoreme() {
+          var sum = 0; var total = maxQues;
+          var corr, resp;
+          var sel = document.getElementById('QuestionsResponses').getElementsByTagName('input');
+
+          for (var i = 0; i < sel.length - 1; i++) {
+            corr = QuesResp[QRpointers[i]][1];
+            resp = sel[i].value;
+            var idval = '"#R' + i + '"';
+            if (resp != '') {
+              if (corr.toLowerCase() == resp.toLowerCase()) {
+                sum++;
+                $(sel[i]).addClass("correctans");
+              }
+              else {
+                $(sel[i]).addClass("wrongans");
+                $(sel[i]).val(''+corr);
+              }
+            }
+            else {
+                $(sel[i]).addClass("incompleteans");
+                $(sel[i]).val(''+corr);
+            }
+          }
+          $("#submit").addClass("incompleteans");
+          $("#submit").val("Submit");
+          $("#submit").attr("disabled", true);
+          document.getElementById('score').value = 'You scored '+((sum / maxQues) * 100).toFixed(0) + '%';
+        }
+      </script>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Chinatown Citizenship 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
