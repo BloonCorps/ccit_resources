@@ -166,6 +166,10 @@
   </div>
 </section>
 <script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+
   function conv(){
       <?php for ($i = 1 ; $i < 60 ; $i++) { ?>
           fetchChinese('<?php echo $i ?>', document.getElementById('<?php echo $i ?>').innerHTML);
