@@ -11,8 +11,8 @@ function rev($array) { ob_start(); ?>
             <div class="alert alert-secondary text-center" role="alert">
             Click any text below to hear the text said aloud. (点击下面的句子，可以听到句子的英语发音.)
             <!-- </div>
-            <button type="button" class="btn btn-outline-secondary" onclick="conv()" style="width:100%">Click to allow mouseover translations. (先点此按钮，然后将鼠标放在任何需要翻译的句子上.)</button>
-            <br></br> -->
+            <button type="button" class="btn btn-outline-secondary" onclick="conv()" style="width:100%">Click to allow mouseover translations. (先点此按钮，然后将鼠标放在任何需要翻译的句子上.)</button> -->
+            <br></br> 
         </div>      
         <?php $incr = 1;?>
         <?php foreach ($array as $topic){?>
