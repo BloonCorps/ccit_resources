@@ -1,3 +1,6 @@
+// This scripty really writes things literally onto the page...
+// Is this even needed? I don't know...
+
 document.write('<nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top" style="background-color: #1d2ade;">
     <div class="container">
       <a class="navbar-brand" href="index.html">PBHA Chinatown Citizenship</a>

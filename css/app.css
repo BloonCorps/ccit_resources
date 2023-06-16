@@ -205,6 +205,20 @@ a {
 	opacity: 100 !important;
 }
 
+.ch {
+	background-color : #ff7575 !important;
+	color: black;
+	padding: 10px 20px;
+	border-radius: 4px;
+	border-color: #ff0000;
+  }
+  
+#mybutton {
+	position:fixed;
+	bottom: -4px;
+	right: 0px;
+}
+
 #starRating li {
 	display: inline-block;
 }
